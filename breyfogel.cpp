@@ -8,7 +8,7 @@
 // Функция получения target
 NFAState *Trans::getTarget() const
 {
-    return this->target;
+    return this->target; // Вернуть target
 }
 
 bool EpsTrans::isApplicable(const std::string &, size_t) const
