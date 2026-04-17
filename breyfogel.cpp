@@ -315,6 +315,7 @@ void findNFAMatchesForStartPos(const NFA &nfa, const std::string &str, size_t st
     delete nextMatchBranchSetPtr; // освободить память для достижимого на следующем шаге множества веток совпадения
 }
 
+// Функция нахождения всех совпадений NFA со строкой
 void findAllNFAMatchesWithString(const NFA &nfa, const std::string &str, std::set<RegExSolution> &solutionsSet)
 {
     solutionsSet.clear(); // считать множество решений пустым
