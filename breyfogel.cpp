@@ -5,6 +5,7 @@
 
 #include "NFA.h"
 
+// Функция получения target
 NFAState *Trans::getTarget() const
 {
     return this->target;
