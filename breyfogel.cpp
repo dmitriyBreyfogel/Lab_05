@@ -139,7 +139,7 @@ void buildNFAFromTree(const RegExNode *treeRoot, NFA *nfa)
         nfa->startState->transitions.insert(new EpsTrans(nfa->terminalState)); // добавить эпсилон переход из начального состояния в конечное
     }
     else if (treeRoot->type == RegExNode::ONE_OR_MORE)
-    { // Иначе если тип узла - квантификатор ОДНО И БОЛЕЕ
+    { // Иначе если тип узла - квантификатор ОДНО И БОЛЕЕ.
 
         if (nfa->startState == nullptr)
         { // Создать начальное состояние, если оно не задано
