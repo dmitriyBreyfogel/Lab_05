@@ -21,6 +21,7 @@ size_t EpsTrans::charsConsumed() const
     return 0;
 }
 
+// Функция перевода в строку
 std::string EpsTrans::toString() const
 {
     return "Eps";
