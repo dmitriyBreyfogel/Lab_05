@@ -58,6 +58,7 @@ bool RegExSolution::operator<(const RegExSolution &other) const
     return match < other.match;
 }
 
+// Функция построения NFA из дерева
 void buildNFAFromTree(const RegExNode *treeRoot, NFA *nfa)
 {
     if (treeRoot->type == RegExNode::CHAR)
