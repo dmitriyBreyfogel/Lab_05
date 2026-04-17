@@ -80,7 +80,7 @@ void buildNFAFromTree(const RegExNode *treeRoot, NFA *nfa)
         }
     }
     else if (treeRoot->type == RegExNode::CONCAT)
-    { // Иначе если тип узла конкатенация
+    { // Иначе если тип узла конкатенация.
 
         NFA subNFA = {nfa->startState, nullptr}; // cоздать временный подавтомат
 
