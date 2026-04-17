@@ -59,7 +59,7 @@ bool RegExSolution::operator<(const RegExSolution &other) const
 void buildNFAFromTree(const RegExNode *treeRoot, NFA *nfa)
 {
     if (treeRoot->type == RegExNode::CHAR)
-    { // Если тип узла символьный
+    { // Если тип узла символьный.
 
         if (nfa->startState == nullptr)
         { // Создать начальное состояние, если оно не задано
