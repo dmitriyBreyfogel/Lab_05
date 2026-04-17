@@ -47,6 +47,7 @@ std::string CharClassTrans::toString() const
     return std::string(1, rangeStart) + "-" + std::string(1, rangeEnd);
 }
 
+// Перегрузка оператора <
 bool RegExSolution::operator<(const RegExSolution &other) const
 {
     if (startPos != other.startPos)
