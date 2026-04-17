@@ -102,7 +102,7 @@ void buildNFAFromTree(const RegExNode *treeRoot, NFA *nfa)
         nfa->terminalState = subNFA.terminalState; // считать конечное состояние подавтомата конечным состоянием автомата
     }
     else if (treeRoot->type == RegExNode::ALTERNATE)
-    { // Иначе если тип узла - альтернатива
+    { // Иначе если тип узла - альтернатива.
 
         for (std::vector<RegExNode *>::const_iterator curChildNode = treeRoot->childNodes.cbegin(); curChildNode != treeRoot->childNodes.cend(); ++curChildNode)
         { // Для каждого дочернего узла альтернативы
@@ -111,7 +111,7 @@ void buildNFAFromTree(const RegExNode *treeRoot, NFA *nfa)
         }
     }
     else if (treeRoot->type == RegExNode::ZERO_OR_MORE)
-    { // Иначе если тип узла - кватификатор НОЛЬ ИЛИ БОЛЕЕ
+    { // Иначе если тип узла - кватификатор НОЛЬ ИЛИ БОЛЕЕ.
 
         if (nfa->startState == nullptr)
         { // Создать начальное состояние, если оно не задано
