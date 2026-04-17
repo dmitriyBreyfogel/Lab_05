@@ -198,6 +198,7 @@ void deleteNFA(NFA &nfa)
     nfa = {nullptr, nullptr}; // делаем невозможным обращение к освобождённой памяти
 }
 
+// Функция сравнения двух NFA
 bool compareNFA(const NFA expected, const NFA actual, std::set<NFAState *> &expSeenStateSet, std::set<NFAState *> &actSeenStateSet)
 {
     if (expected.startState == expected.terminalState && actual.startState == actual.terminalState)
